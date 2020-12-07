@@ -5,33 +5,23 @@ def solveQuestion(inputPath):
     fileP.close()
     
     totalCount = 0
-    answeredQuestion = {}
-    currentGroupSize = 0
+    answeredQuestion = []
     
     for valueLine in fileLines:
         valueLine = str(valueLine).rstrip("\n")
 
         if valueLine == "":
-            for question in answeredQuestion:
-                if answeredQuestion[question] == currentGroupSize:
-                    totalCount += 1
-
-            answeredQuestion = {}
-            currentGroupSize = 0
+            answeredQuestion = []
             continue
-
-        currentGroupSize += 1
         
         for question in valueLine:
             if question in answeredQuestion:
-                answeredQuestion[question] += 1
-            else:
-                answeredQuestion[question] = 1
+                continue
 
-    for question in answeredQuestion:
-        if answeredQuestion[question] == currentGroupSize:
             totalCount += 1
+
+            answeredQuestion.append(question)
 
     return totalCount
 
-print(solveQuestion('InputD06Q2.txt'))
+print(solveQuestion('InputD06Q1.txt'))

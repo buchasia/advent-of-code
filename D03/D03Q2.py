@@ -27,4 +27,4 @@ def solveQuestion(inputPath):
 
     return validCount
 
-print(solveQuestion('InputD03Q1.txt'))
+print(solveQuestion('InputD03Q2.txt'))

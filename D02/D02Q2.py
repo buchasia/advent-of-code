@@ -29,4 +29,4 @@ def solveQuestion(inputPath):
 
     return sequence
 
-print(solveQuestion('InputD02Q1.txt'))
+print(solveQuestion('InputD02Q2.txt'))

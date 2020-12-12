@@ -41,4 +41,4 @@ def solveQuestion(inputPath):
             return sectorId
             
 
-print(solveQuestion('InputD04Q1.txt'))
+print(solveQuestion('InputD04Q2.txt'))

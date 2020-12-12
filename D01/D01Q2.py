@@ -41,4 +41,4 @@ def solveQuestion(inputPath):
                 else:
                     return abs(i) + abs(oldY)
         
-print(solveQuestion('InputD01Q1.txt'))
+print(solveQuestion('InputD01Q2.txt'))

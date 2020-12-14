@@ -46,4 +46,4 @@ def solveQuestion(inputPath):
     for h in range(screenH):
         print(''.join(screen[h]))
     
-solveQuestion('InputD08Q1.txt')
+solveQuestion('InputD08Q2.txt')

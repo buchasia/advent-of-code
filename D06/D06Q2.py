@@ -8,7 +8,7 @@ def solveQuestion(inputPath):
     states = {}
     states[0] = fileLines
     currentValues = list(fileLines)
-    while not combinationFound(states):
+    while 1:
         counter += 1
         currentValues = list(currentValues)
         maxValue = max(currentValues)
@@ -22,14 +22,18 @@ def solveQuestion(inputPath):
             currentValues[index] += 1
             
         states[counter] = currentValues
+
+        indexOfCombination = combinationIndexFound(states)
+        if indexOfCombination >= 0:
+            return counter - indexOfCombination
+        
     return counter
 
-def combinationFound(states):
+def combinationIndexFound(states):
     for i in range(len(states) - 1):
         if states[i] == states[len(states) - 1]:
-            return True
+            return i
 
-    return False
+    return -1
 
-
-print(solveQuestion('InputD06Q1.txt'))
+print(solveQuestion('InputD06Q2.txt'))

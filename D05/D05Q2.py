@@ -18,4 +18,4 @@ def solveQuestion(inputPath):
 
     return counter
 
-print(solveQuestion('InputD05Q1.txt'))
+print(solveQuestion('InputD05Q2.txt'))

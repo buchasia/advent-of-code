@@ -46,10 +46,10 @@ def infixToPostfix(infixexpr):
         elif token == '(':
             operations.push(token)
         elif token == ')':
-            topToken = operations.pop()
-            while topToken != '(':
-                result.append(topToken)
-                topToken = operations.pop()
+            top = operations.pop()
+            while top != '(':
+                result.append(top)
+                top = operations.pop()
         else:
             while (not operations.isEmpty()) and precedence[operations.peek()] >= precedence[token]:
                   result.append(operations.pop())

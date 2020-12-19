@@ -1,10 +1,6 @@
-def solveQuestion(inputPath, size):
+def knotHash(inputStr, size):
     
-    fileP = open(inputPath, 'r')
-    fileLines = fileP.readlines()[0].strip()
-    fileP.close()
-
-    lengths = [ord(char) for char in fileLines]
+    lengths = [ord(char) for char in inputStr]
     lengths.append(17)
     lengths.append(31)
     lengths.append(73)
@@ -35,9 +31,24 @@ def solveQuestion(inputPath, size):
 
         hexVal = hex(value)[2:]
         if len(hexVal) == 1:
-            hexVal = '0' + hexVal
+            hexVal += '0'
         result += hexVal
 
-    return result      
+    return result
+
+def solveQuestion(input):
+    total = 0
+    for i in range(128):
+        inputStr = input + '-' + str(i)
+        hashString = knotHash(inputStr, 256)
+        binaryString = ''
+        for i in range(32):
+            temp = bin(int(hashString[i], 16))[2:]
+            binaryString += temp.zfill(4)
+
+        total += binaryString.count('1')
+
+    return total
     
-print(solveQuestion('InputD10Q2.txt', 256))
+    
+print(solveQuestion('hwlqcszp'))

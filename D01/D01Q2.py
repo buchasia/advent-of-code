@@ -16,4 +16,4 @@ def solveQuestion(inputPath):
 
     return total
 
-print(solveQuestion('InputD01Q2.txt'))
+print(solveQuestion('D01.txt'))

@@ -6,12 +6,17 @@ def getInput(inputPath):
 
 def solvePart1(inputData):
 
-    return ([max([boxId.count(char) == 2 for char in set(boxId)]) for boxId in inputData].count(True) *
+    return ([max([boxId.count(char) == 2  for char in set(boxId)]) for boxId in inputData].count(True) *
             [max([boxId.count(char) == 3 for char in set(boxId)]) for boxId in inputData].count(True))
         
     
 def solvePart2(inputData):
-    pass
+    inputList = [list(boxId) for boxId in inputData]
+    for i in range(len(inputList) - 1):
+        for j in range(1, len(inputList)):
+            compValue = ''.join([inputList[i][k] if inputList[j][k] == inputList[i][k] else '' for k in range(len(inputList[i]))])
+            if len(compValue) == len(inputList[i]) - 1:
+                return compValue
 
 def solve(inputPath):
     inputData = getInput(inputPath)

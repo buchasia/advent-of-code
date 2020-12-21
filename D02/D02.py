@@ -11,11 +11,10 @@ def solvePart1(inputData):
         
     
 def solvePart2(inputData):
-    inputList = [list(boxId) for boxId in inputData]
-    for i in range(len(inputList) - 1):
-        for j in range(1, len(inputList)):
-            compValue = ''.join([inputList[i][k] if inputList[j][k] == inputList[i][k] else '' for k in range(len(inputList[i]))])
-            if len(compValue) == len(inputList[i]) - 1:
+    for i in range(len(inputData) - 1):
+        for j in range(1, len(inputData)):
+            compValue = ''.join([inputData[i][k] if inputData[j][k] == inputData[i][k] else '' for k in range(len(inputData[i]))])
+            if len(compValue) == len(inputData[i]) - 1:
                 return compValue
 
 def solve(inputPath):

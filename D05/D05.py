@@ -1,11 +1,11 @@
 import timeit
 
-# This methods reads the input file and prepares the data in the needed format
+# This function reads the input file and prepares the data in the needed format
 def getInput(inputPath):
     fileP = open(inputPath, 'r')
     return fileP.readlines()[0].strip()
 
-# This method removes the reacting units present in the polymer
+# This function removes the reacting units present in the polymer
 def reactingPoly(polymer):
     units = str(polymer)
     
@@ -37,7 +37,7 @@ def solveParts(inputData):
                  for char in 'abcdefghijklmnopqrstuvwxyz'])
            ] 
 
-# This method reads the input data in the format that can be used by solvers        
+# This function reads the input data in the format that can be used by solvers        
 def solve(inputPath):
     inputData = getInput(inputPath)
     print(solveParts(inputData))

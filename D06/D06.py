@@ -1,6 +1,6 @@
 import timeit
 
-# This methods reads the input file and prepares the data in the needed format
+# This function reads the input file and prepares the data in the needed format
 def getInput(inputPath):
     fileP = open(inputPath, 'r')
     return [[int(x) for x in line.strip().split(', ')] for line in fileP.readlines()]
@@ -44,7 +44,7 @@ def solveParts(inputData):
 
     return [part1, part2]
 
-# This method reads the input data in the format that can be used by solvers        
+# This function reads the input data in the format that can be used by solvers        
 def solve(inputPath):
     inputData = getInput(inputPath)
     print(solveParts(inputData))

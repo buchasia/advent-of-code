@@ -1,0 +1,41 @@
+Following Nomenclature is used:
+Me_Damage: my Damage
+Me_Armor: my Armor
+Boss_Damage: Boss Damage = 8 (Problem Input)
+Boss_Armor: Boss Armor = 2 (Problem Input)
+
+Maximum Damage Possible = 8 (Greataxe) + 3 (Damage +3) + 2 (Damage +2) = 13
+Maximum Armor Possible = 5 (Armor) + 3 (Armor +3) + 2 (Armor +2) = 10
+
+Part 1
+-------
+For me to win the difference 
+
+Me_Damage - Boss_Armor >= Boss_Damage - Me_Armor
+=> Me_Damage - 2 >= 8 - Me_Armor
+
+Following Combinations are possible: (Since, we want to mimize Costs)
+Me_Armor	Me_Damage 	Min_Amt_Armor	Min_Amt_Damage
+0			10			0				115					115
+1			9			13				90					103
+2			8			31				65					96
+3			7			51				40					91		
+4			6			73				25					98
+5			5			93				10					103
+6			4			115				8					123
+
+Since one of the Weapons is mandatory, we will always have atleast 4 damage. 
+We remove all where Me_Damage < 4.
+
+So the minimum is 91
+
+Part 2
+-------
+Dagger = 4, Effective Damage = 2, Max Armor = 5
+Dagger = 5, Effective Damage = 3, Max Armor = 4
+Dagger = 6, Effective Damage = 4, Max Armor = 3
+Dagger = 7, Effective Damage = 5, Max Armor = 2
+Dagger = 8, Effective Damage = 6, Max Armor = 1
+Dagger = 9, Effective Damage = 7, Max Armor = 0
+MaxCost = Dagger + Ring Damage +3 + Ring Damage +2 = 158
+This is the maximum

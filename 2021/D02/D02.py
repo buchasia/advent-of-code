@@ -50,7 +50,7 @@ def getPosition(directions, workWithAim):
     return x * y
 
 # Part 1
-print('Part 1:', getPosition(getAllData('InputD02.txt'), 0))
+print('Part 1:', getPosition(getAllData('Input.txt'), 0))
 
 # Part 2
-print('Part 2:', getPosition(getAllData('InputD02.txt'), 1))
+print('Part 2:', getPosition(getAllData('Input.txt'), 1))

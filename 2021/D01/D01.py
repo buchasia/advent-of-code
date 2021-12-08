@@ -46,7 +46,7 @@ def largerMeasurement(measurements, sumIndex):
     return count
 
 # Part 1
-print('Part 1:', largerMeasurement(getAllData('InputD01.txt'), 1))
+print('Part 1:', largerMeasurement(getAllData('Input.txt'), 1))
 
 # Part 2
-print('Part 2:', largerMeasurement(getAllData('InputD01.txt'), 3))
+print('Part 2:', largerMeasurement(getAllData('Input.txt'), 3))
